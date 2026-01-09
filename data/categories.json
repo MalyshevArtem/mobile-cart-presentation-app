@@ -1,0 +1,7 @@
+[
+  { "id": 1, "name": "Овощи, фрукты, грибы", "image": "images/categories/fruits.webp" },
+  { "id": 2, "name": "Рыба", "image": "images/categories/fish.webp" },
+  { "id": 3, "name": "Мясо и птица", "image": "images/categories/meat.webp" },
+  { "id": 4, "name": "Хлеб и выпечка", "image": "images/categories/bread.webp" },
+  { "id": 5, "name": "Молоко, сыр, яйца", "image": "images/categories/dairy.webp" }
+]
