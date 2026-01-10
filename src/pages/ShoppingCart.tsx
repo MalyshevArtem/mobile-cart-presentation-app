@@ -22,7 +22,7 @@ export default function ShoppingCart({ products }: { products: Product[] }) {
                         <h1 className="mr-5 font-bold text-[26px]">Корзина</h1>
                         {total > 0 && <span className="absolute top-0 right-0 text-gray-500">{cart.length}</span>}
                     </div>
-                    <button className="text-[14px] font-medium text-gray-300" onClick={removeAll}>Очистить</button>
+                    <button className="text-[14px] font-medium text-gray-300 cursor-pointer" onClick={removeAll}>Очистить</button>
                 </div>
             </div>
             <div className="mb-[120px]">

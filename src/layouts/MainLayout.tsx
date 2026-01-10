@@ -5,7 +5,7 @@ import type { Product } from "../types/Types";
 
 export default function MainLayout({ products }: { products: Product[] }) {
     return (
-        <>
+        <div className="max-w-[500px] m-auto">
             <Header products={products} />
             <main className="pb-10">
                 <div className="mt-4">
@@ -15,6 +15,6 @@ export default function MainLayout({ products }: { products: Product[] }) {
                 </div>
             </main>
             <BottomMenu />
-        </>
+        </div>
     );
 }

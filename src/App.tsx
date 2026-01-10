@@ -4,6 +4,7 @@ import ShoppingCart from "./pages/ShoppingCart.tsx";
 import MainLayout from "./layouts/MainLayout.tsx";
 import { useState, useEffect } from "react";
 import type { Product } from "./types/Types";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -25,6 +26,7 @@ function App() {
   return (
     <>
       <HashRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<MainLayout products={products}/>}>
             <Route path="/" element={<Home products={products}/>}></Route>

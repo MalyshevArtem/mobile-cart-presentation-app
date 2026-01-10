@@ -5,6 +5,7 @@ import { XMarkIcon } from "@heroicons/react/16/solid";
 import { useState } from "react";
 import SearchProduct from "./SearchProduct.tsx";
 import type { Product } from "../types/Types.ts";
+import { NavLink } from "react-router-dom";
 
 
 export default function Header({products} : {products: Product[]}) {
@@ -22,11 +23,11 @@ export default function Header({products} : {products: Product[]}) {
 
     return (
         <div className="h-14">
-            {isFocused && <div className="h-screen w-full z-10 fixed bg-black/50" onClick={() => setIsFocused(false)}></div>}
-            <div className="flex w-full px-3 py-2 fixed z-20 bg-white">
+            {isFocused && <div className="h-screen w-full max-w-[500px] z-10 fixed bg-black/50" onClick={() => setIsFocused(false)}></div>}
+            <div className="flex w-full max-w-[500px] px-3 py-2 fixed z-20 bg-white">
                 <div className="mr-3 flex justify-center items-center">
                     {!isFocused ?
-                        <img className="h-11 w-11 object-cover" src="logo.svg" alt="Logo" /> :
+                        <NavLink to="/"><img className="h-11 w-11 object-cover" src="logo.svg" alt="Logo" /></NavLink> :
                         <ChevronLeftIcon className="h-6 w-6 text-gray-500" onClick={() => setIsFocused(false)} />
                     }
                 </div>
@@ -45,7 +46,7 @@ export default function Header({products} : {products: Product[]}) {
                     </div>
                 </form>
                 {(isFocused && value.trim().length > 2) && (
-                    <div className="w-full min-h-30 bg-white fixed z-20 left-0 top-14 flex justify-center items-center">
+                    <div className="w-full max-w-[500px] min-h-30 bg-white fixed -ml-3 z-20 top-14 flex justify-center items-center">
                         { productsList.length > 0 ? (
                             <div className="flex flex-col w-full">
                                 <div className="px-4 pt-4">

@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 export default function BottomMenu() {
     const cart = useCartStore((state) => state.cart);
     return (
-        <div className="w-full fixed bottom-0 inset-x-0 shadow-[0_-4px_18px_rgba(0,0,0,0.05)] bg-white">
+        <div className="w-full max-w-[500px] fixed bottom-0 shadow-[0_-4px_18px_rgba(0,0,0,0.05)] bg-white">
             <div className="h-[62px] flex justify-around">
                 <NavLink
                 to="/" 
